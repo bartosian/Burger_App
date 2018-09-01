@@ -42,7 +42,7 @@ class BurgerBuild extends Component {
 
         this.setState({
             totalPrice: newPrice,
-            ingreients: updatedIngredients
+            ingredients: updatedIngredients
         });
     }
 
