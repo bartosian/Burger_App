@@ -132,7 +132,18 @@ class BurgerBuild extends Component {
         //             purchasing: false
         //         })
         //     });
-        this.props.history.push("/checkout");
+
+        const query = [];
+        for(let i in this.state.ingredients) {
+            query.push(encodeURIComponent(i) + "=" + encodeURIComponent(this.state.ingredients[i]));
+        }
+
+        const queryStr = query.join("&");
+
+        this.props.history.push({
+            pathname: "/checkout",
+            search: "?" + queryStr
+        });
     }
 
     render() {
