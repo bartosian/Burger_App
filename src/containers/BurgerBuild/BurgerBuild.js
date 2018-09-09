@@ -7,7 +7,6 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import Axios from "../../axios-orders";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import Checkout from "../Checkout/Checkout";
 
 
 const INGREDIENT_PRICES = {
@@ -185,7 +184,6 @@ class BurgerBuild extends Component {
                     { orderSummary }
                 </Modal>
                 { burger }
-                <Checkout />
             </Aux>
         );
     }
