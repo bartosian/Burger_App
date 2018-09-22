@@ -67,9 +67,18 @@ class ContactData extends Component {
         this.setState({
             loading: true
         });
+
+        const formData = [];
+
+        for(let key in this.state.orderForm ) {
+            formData.push({
+                key: this.state.orderForm[key].value
+            });
+        }
         const order = {
           ingredients: this.state.ingredients,
           price: this.props.price,
+            orderData: formData
         };
 
         // alert("You continue!");
@@ -109,7 +118,7 @@ class ContactData extends Component {
             });
         }
 
-        let form = ( <form action="#">
+        let form = ( <form onSubmit={ this.orderHandler } action="#">
             {
                 formElementsArr.map( el => (
                     <Input
@@ -121,7 +130,7 @@ class ContactData extends Component {
                     />
                 ))
             }
-            <Button btnType="Success" clicked={ this.orderHandler }>ORDER</Button>
+            <Button btnType="Success">ORDER</Button>
         </form>);
 
         if(this.state.loading) {
