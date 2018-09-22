@@ -7,13 +7,15 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
     state = {
-        name: '',
-        email: '',
-        address: {
-            street: '',
-            postalCode: ''
-        },
-        loading: false
+        orderForm: {
+                name: "Kiryl",
+                street: "33180",
+                zipCode: "19877",
+                age: 28,
+                city: "Miami",
+                email: "mypost@mail.ru",
+                delieveryMethod: "fastest"
+        }
     };
 
     orderHandler = (event) => {
@@ -25,11 +27,6 @@ class ContactData extends Component {
         const order = {
           ingredients: this.state.ingredients,
           price: this.props.price,
-          customer: {
-              name: "Kiryl",
-              age: 28,
-              city: "Miami"
-          }
         };
 
         // alert("You continue!");
