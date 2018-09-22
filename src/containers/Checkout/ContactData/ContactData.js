@@ -87,6 +87,10 @@ class ContactData extends Component {
             });
     }
 
+    inputChangedHandler = (e, inputIdentifier) => {
+        console.log(e.target.value);
+    }
+
     render() {
 
         const formElementsArr = [];
@@ -106,6 +110,7 @@ class ContactData extends Component {
                         elementType={ el.config.elementType }
                         elementConfig={ el.config.elementConfig}
                         value={ el.config.value }
+                        changed={ (event) => this.inputChangedHandler(event, el.id) }
                     />
                 ))
             }
