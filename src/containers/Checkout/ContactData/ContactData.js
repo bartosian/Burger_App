@@ -68,12 +68,10 @@ class ContactData extends Component {
             loading: true
         });
 
-        const formData = [];
+        const formData = {};
 
         for(let key in this.state.orderForm ) {
-            formData.push({
-                key: this.state.orderForm[key].value
-            });
+            formData[key] = this.state.orderForm[key].value;
         }
         const order = {
           ingredients: this.state.ingredients,

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082727fe-cbdb-4294-a9e2-e49a4bce9b42" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +43,8 @@
       <file leaf-file-name="ContactData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+            <state relative-caret-position="187">
+              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -280,12 +281,12 @@
       <workItem from="1536523753567" duration="7359000" />
       <workItem from="1536582675138" duration="1020000" />
       <workItem from="1536869782604" duration="109000" />
-      <workItem from="1537632808718" duration="5401000" />
+      <workItem from="1537632808718" duration="6323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55047000" />
+    <option name="totallyTimeSpent" value="55969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="140" y="43" width="1400" height="921" extended-state="0" />
@@ -658,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
