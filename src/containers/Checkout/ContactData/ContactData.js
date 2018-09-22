@@ -99,7 +99,6 @@ class ContactData extends Component {
         }
 
         let form = ( <form action="#">
-            <Input elementType=".." elementConfig="..." value="..."/>
             {
                 formElementsArr.map( el => (
                     <Input
