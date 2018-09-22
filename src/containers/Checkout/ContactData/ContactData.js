@@ -8,13 +8,56 @@ import Input from '../../../components/UI/Input/Input';
 class ContactData extends Component {
     state = {
         orderForm: {
-                name: "Kiryl",
-                street: "33180",
-                zipCode: "19877",
-                age: 28,
-                city: "Miami",
-                email: "mypost@mail.ru",
-                delieveryMethod: "fastest"
+                name: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: "text",
+                        placeholder: "Your name"
+                    },
+                    value: ""
+                },
+                street: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: "text",
+                        placeholder: "Your street"
+                    },
+                    value: ""
+                },
+                zipCode: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: "text",
+                        placeholder: "Your ZIP code"
+                    },
+                    value: ""
+                },
+                city: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: "text",
+                        placeholder: "country"
+                    },
+                    value: ""
+                },
+                email: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: "email",
+                        placeholder: "Your email"
+                    },
+                    value: ""
+                },
+                delieveryMethod: {
+                    elementType: 'select',
+                    elementConfig: {
+                        options: [
+                            { value: "fastest", displayValue: "Fastest" },
+                            { value: "cheapest", displayValue: "Cheapest" }
+                        ]
+                    },
+                    value: ""
+                }
         }
     };
 
