@@ -31,12 +31,12 @@ class BurgerBuild extends Component {
     }
 
     componentDidMount() {
-        Axios.get("https://burger-project-react-my.firebaseio.com/ingredients.json")
-            .then(response => {
-                this.setState({
-                    ingredients: response.data
-                });
-            });
+        // Axios.get("https://burger-project-react-my.firebaseio.com/ingredients.json")
+        //     .then(response => {
+        //         this.setState({
+        //             ingredients: response.data
+        //         });
+        //     });
     }
 
     updatePurchaseState(ingredients) {
