@@ -18,7 +18,6 @@ class BurgerBuild extends Component {
         super(props);
 
         this.state = {
-            totalPrice: 4,
             purchaseable: false,
             purchasing: false,
             loading: false
@@ -43,48 +42,6 @@ class BurgerBuild extends Component {
         });
     }
 
-    addIngredientsHandler = (type) => {
-        const oldCount = this.state.ingredients[type];
-        const newCount = oldCount + 1;
-        const updatedIngredients = {
-            ...this.state.ingredients
-        };
-        updatedIngredients[type] = newCount;
-        const priceAddition = INGREDIENT_PRICES[type];
-        const oldPrice = this.state.totalPrice;
-        const newPrice = oldPrice + priceAddition;
-
-
-        this.setState({
-            totalPrice: newPrice,
-            ingredients: updatedIngredients
-        });
-
-        this.updatePurchaseState(updatedIngredients);
-    }
-
-    removeIngredientsHandler = (type) => {
-        const oldCount = this.state.ingredients[type];
-
-        if(oldCount <= 0) return;
-
-        const newCount = oldCount - 1;
-        const updatedIngredients = {
-            ...this.state.ingredients
-        };
-        updatedIngredients[type] = newCount;
-        const priceDeduction = INGREDIENT_PRICES[type];
-        const oldPrice = this.state.totalPrice;
-        const newPrice = oldPrice - priceDeduction;
-
-
-        this.setState({
-            totalPrice: newPrice,
-            ingredients: updatedIngredients
-        });
-
-        this.updatePurchaseState(updatedIngredients);
-    }
 
     purchaseHandler = () => {
         this.setState({
@@ -129,7 +86,7 @@ class BurgerBuild extends Component {
                 ingredients={ this.props.ingr }
                 purchaseCancel={ this.purchaseCancelHandler }
                 purchaseContinue={ this.purchaseContinuehandler }
-                total={ this.state.totalPrice.toFixed(2) }
+                total={ this.props.price.toFixed(2) }
             />;
         }
 
@@ -146,7 +103,7 @@ class BurgerBuild extends Component {
                     <Burger ingredients={ this.props.ingr }/>
                     <BuildControls
                         ordered={ this.purchaseHandler }
-                        total = { this.state.totalPrice }
+                        total = { this.props.price }
                         ingredientAdded= { this.props.onIngredientAdded }
                         ingredientRemoved= { this.props.onIngredientRemoved }
                         disabled = { disableInfo }
@@ -169,7 +126,8 @@ class BurgerBuild extends Component {
 
 const mapStateToprops = state => {
   return {
-      ingr: state.ingredients
+      ingr: state.ingredients,
+      price: state.totalPrice
   }
 };
 
