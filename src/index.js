@@ -8,15 +8,16 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './store/reducer';
 
+const store = createStore(reducer);
 const app = (
-    <Provider>
+    <Provider store={ store }>
         <BrowserRouter>
             <App />
         </BrowserRouter>
     </Provider>
 );
 
-const store = createStore(reducer);
+
 
 ReactDOM.render(app, document.getElementById('root'));
 registerServiceWorker();

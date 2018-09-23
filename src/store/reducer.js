@@ -10,7 +10,7 @@ const initialState = {
     totalPrice: 0
 };
 
-const reducer = (state=initialState, action) {
+const reducer = (state=initialState, action) => {
     switch(action.type) {
         case actions.ADD_INGREDIENT:
             return {
