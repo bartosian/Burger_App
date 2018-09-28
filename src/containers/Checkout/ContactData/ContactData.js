@@ -93,7 +93,7 @@ class ContactData extends Component {
                     loading: false
                 })
             });
-    }
+    };
 
     inputChangedHandler = (e, inputIdentifier) => {
        const newOrderForm = { ...this.state.orderForm };
@@ -104,7 +104,7 @@ class ContactData extends Component {
        this.setState({
            orderForm: newOrderForm
        });
-    }
+    };
 
     render() {
 
