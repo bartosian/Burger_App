@@ -42,23 +42,23 @@ class BurgerBuild extends Component {
 
     }
 
-
     purchaseHandler = () => {
         this.setState({
             purchasing: true
         });
-    }
+    };
 
     purchaseCancelHandler = () => {
         this.setState({
             purchasing: false
         });
-    }
+    };
 
     purchaseContinuehandler = () => {
 
         this.props.history.push('/checkout');
     }
+
 
     render() {
 
